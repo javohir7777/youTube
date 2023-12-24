@@ -1,0 +1,76 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 46px 8px 24px;
+  .youTube-brand {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    img {
+      cursor: pointer;
+    }
+  }
+  .youTube-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    .input {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 600px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      padding: 1px 0px 1px 8px;
+      border-radius: 2px;
+      border: 1px solid var(--light-secondary, rgba(0, 0, 0, 0.22));
+      background: #fff;
+      box-shadow: 1px 1px 2px 0px rgba(211, 211, 211, 0.25) inset;
+      input {
+        width: 550px;
+        height: 34px;
+        color: #000;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        opacity: 0.5;
+        outline: none;
+        border: none;
+      }
+      button {
+        display: flex;
+        width: 64px;
+        height: 38px;
+        padding: 7px 20px;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        cursor: pointer;
+      }
+    }
+    .golos {
+      display: flex;
+      width: 40px;
+      height: 40px;
+      padding: 8px;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      border-radius: 20px;
+      background: var(--light-search, rgba(0, 0, 0, 0.02));
+      cursor: pointer;
+    }
+  }
+  .youTube-video {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    img {
+      cursor: pointer;
+    }
+  }
+}
