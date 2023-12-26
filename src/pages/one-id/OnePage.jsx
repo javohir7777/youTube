@@ -2,15 +2,18 @@ import ReactPlayer from "react-player";
 import { requies } from "../../server";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
+import Commit from "../../constainer/crud/Commit";
 
 const OnePage = () => {
-    const { videoId } = useParams();
+  const { videoId } = useParams();
   console.log(videoId);
 
   useEffect(() => {
     const getData = async () => {
       try {
-        const { data } = await requies.get(`videos?part=snippet,statistics&id=${videoId}`);
+        const { data } = await requies.get(
+          `videos?part=snippet,statistics&id=${videoId}`
+        );
         console.log(data.items);
       } catch (err) {
         console.log(err);
@@ -24,8 +27,9 @@ const OnePage = () => {
       <br />
       <h1 style={{ color: "red" }}>OnePage: {videoId}</h1>
       <ReactPlayer url={`https://www.youtube.com/watch?v=${videoId}`} />
+      <Commit />
     </div>
-  )
-}
+  );
+};
 
-export default OnePage
+export default OnePage;
